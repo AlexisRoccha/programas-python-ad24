@@ -16,3 +16,11 @@
 - p07-funciones-trigonometricas
 - p07b-funciones-del-modulo-math
 - P08-dividir-en-cifras
+
+##  Tarea 1
+- p09-hipotenusa-triangulo
+- p10-tercer-angulo
+- p11-convertir-temperatura
+- p12-volumen-cilindro
+- p13-calculo-tiempo
+- p14-numero-suerte
