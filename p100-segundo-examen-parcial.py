@@ -20,8 +20,8 @@ o Un resumen que incluya:
 
 import os; os. system("cls")
 
-print("Muebleria Muebles Dico")
-print("Sistema de Procesamiento de Empledos")
+print("Muebleria Muebles Dico ")
+print("Sistema de Procesamiento de Empledos ")
 
 '''Lista para almacenar los datos de los empleados'''
 empleados = []
