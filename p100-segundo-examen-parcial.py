@@ -20,20 +20,19 @@ o Un resumen que incluya:
 
 import os; os. system("cls")
 
-print("Muebleria Muebles Dico ")
-print("Sistema de Procesamiento de Empledos ")
+print("Muebleria Muebles Dico")
+print("Sistema de Procesamiento de Empledos")
 
-'''Lista para almacenar los datos de los empleados'''
 empleados = []
 
-'''Pedimos los datos al usuario'''
-def pedir_datos():
+while True:
     nombre = input("Ingresa tu nombre: ")
     edad = int(input("Ingresa tu edad: "))
     sexo = input("Ingresa tu sexo (H/M): ").upper()
     pasatiempos = input("Ingresa tus pasatiempos (separados por comas): ").split(',')
     salario = float(input("Ingresa tu salario: "))
-    return {
+
+    empleado = {
         "Nombre": nombre,
         "Edad": edad,
         "Sexo": sexo,
@@ -41,24 +40,20 @@ def pedir_datos():
         "Salario": salario
     }
 
-'''Pedimos datos de varios empleados'''
-while True:
-    empleados.append(pedir_datos())
+    empleados.append(empleado)
+
     continuar = input("¿Deseas ingresar otro empleado? (S/N): ").upper()
     if continuar == 'N':
         break
-
-'''Imprimimos los datos en formato de diccionarios'''
+    
 print("Datos de los empleados:")
 for empleado in empleados:
     print(empleado)
 
-'''Imprimimos los datos en formato tabular'''
 print("\nTabla de datos:")
 for empleado in empleados:
     print("{:<10} {:<5} {:<5} {:<10} {:<20}".format(empleado["Nombre"], empleado["Edad"], empleado["Sexo"], empleado["Salario"], ", ".join(empleado["Pasatiempos"])))
 
-'''Resumimos los datos'''
 total_empleados = len(empleados)
 total_hombres = sum(1 for e in empleados if e["Sexo"] == 'H')
 total_mujeres = sum(1 for e in empleados if e["Sexo"] == 'M')
@@ -69,7 +64,6 @@ promedio_salario = suma_salarios / total_empleados if total_empleados > 0 else 0
 mayor_edad = max(empleados, key=lambda e: e["Edad"])
 menor_edad = min(empleados, key=lambda e: e["Edad"])
 
-'''Contamos los pasatiempos'''
 pasatiempos_contador = {}
 for empleado in empleados:
     for pasatiempo in empleado["Pasatiempos"]:
@@ -79,8 +73,7 @@ for empleado in empleados:
         else:
             pasatiempos_contador[pasatiempo] = 1
 
-'''Imprimimos el resumen'''
-print("\nResumen :")
+print("\nResumen:")
 print(f"Empleados: {total_empleados}")
 print(f"Mujeres: {total_mujeres}")
 print(f"Hombres: {total_hombres}")
