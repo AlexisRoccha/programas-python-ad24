@@ -80,7 +80,7 @@ for empleado in empleados:
             pasatiempos_contador[pasatiempo] = 1
 
 '''Imprimimos el resumen'''
-print("\nResumen:")
+print("\nResumen :")
 print(f"Empleados: {total_empleados}")
 print(f"Mujeres: {total_mujeres}")
 print(f"Hombres: {total_hombres}")
