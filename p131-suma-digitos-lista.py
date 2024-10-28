@@ -1,21 +1,25 @@
 import os; os.system("Cls")
 
-def obtener_numeros():
-    numeros = list(map(int, input("Dame los números separados por espacios: ").split()))
-    return numeros
+def leer_arreglo():
+    entrada = input("Ingresa los números (separados por espacio): ")
+    return [int(num) for num in entrada.split()]
 
-def suma_digitos(num):
+def suma_digitos(numero):
     suma = 0
-    while num > 0:
-        suma += num % 10
-        num //= 10
+    while numero > 0:
+        suma += numero % 10
+        numero //= 10
     return suma
 
-def calcular_sumas(lista):
-    return [suma_digitos(num) for num in lista]
+def suma_digitos_lista(lista):
+    resultado = []
+    for num in lista:
+        resultado.append(suma_digitos(num))
+    return resultado
 
-numeros = obtener_numeros()
-sumas_digitos = calcular_sumas(numeros)
+# Programa principal
+numeros = leer_arreglo()
+resultado_suma_digitos = suma_digitos_lista(numeros)
 
-print("\nLista de números original:", numeros)
-print("Lista con la suma de los dígitos:", sumas_digitos)
+print(f"\nLa lista de números original: {numeros}")
+print(f"La lista con las sumas de los dígitos: {resultado_suma_digitos}")
