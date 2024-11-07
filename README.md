@@ -205,3 +205,6 @@ p126-modulos-integrados
 
 ## Tarea 9
 - p138-articulo
+
+## Actividad 18 - Prog Orientada a Objetos - Parte 2
+- p139-ventas
