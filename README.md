@@ -208,3 +208,6 @@ p126-modulos-integrados
 
 ## Actividad 18 - Prog Orientada a Objetos - Parte 2
 - p139-ventas
+
+## Examen 3
+- p140-tecer-examen-parcial
